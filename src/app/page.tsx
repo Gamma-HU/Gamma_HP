@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import headerImg from "../images/header.png";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[80vh] w-full">
         <Image
-          src="/images/header.png"
+          src={headerImg}
           alt="Gamma Header"
           fill
           style={{ objectFit: "cover" }}
