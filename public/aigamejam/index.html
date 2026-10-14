@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Gamejam Sapporo@北大 | AIで、1日で、ゲームを作る。</title>
+<meta name="description" content="2026年11月29日(日)、北海道大学で開催。AIを使って、コードが書けなくても1日でゲームを1本作るゲームジャム。参加無料・懇親会つき。">
+<meta property="og:title" content="AI Gamejam Sapporo@北大">
+<meta property="og:description" content="11/29(日) 北海道大学。AIで、1日で、ゲームを作る。">
+<meta property="og:image" content="https://gamma-hp.vercel.app/aigamejam/img/hero.png">
+<meta property="og:url" content="https://gamma-hp.vercel.app/aigamejam">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;line-height:1.85;-webkit-font-smoothing:antialiased;font-feature-settings:"palt" 1}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0}
+.top nav{display:flex;gap:24px}
+.top nav a{text-decoration:none;font-size:14px}
+@media (max-width:760px){.top nav{display:none}}
+.hero-art img{width:100%}
+.facts{list-style:none;margin:0;padding:0}
+.cta-note{display:block;font-size:13px;margin-top:12px}
+section{padding:96px 0}
+h2{margin:0 0 28px;line-height:1.3;word-break:auto-phrase;text-wrap:balance}
+.lead,h3,.stages b{word-break:auto-phrase}
+h3{margin:0 0 8px;line-height:1.5}
+p{margin:0 0 14px}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+@media (max-width:860px){.grid2,.grid3{grid-template-columns:1fr;gap:28px}}
+.stages{list-style:none;margin:0;padding:0}
+.stages li{display:grid;grid-template-columns:5.5em minmax(0,1fr);gap:16px;align-items:baseline}
+.stages b{display:block}
+.person img,.person .tbd{width:112px;height:112px;object-fit:cover;margin-bottom:16px}
+.person .tbd{display:grid;place-items:center}
+details summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-weight:700}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";flex:none}
+details[open] summary::after{content:"−"}
+details p{margin:10px 0 0}
+ul.list{margin:0;padding-left:1.2em}
+.sponsor-logo{height:46px;width:auto;margin:8px 0 12px}
+.person img.logo{object-fit:contain;background:#fff;padding:16px}
+.date-main{text-align:center;margin:0 0 64px}
+.date-label{display:inline-block;font-weight:900;font-size:17px;letter-spacing:.12em;margin:0 0 6px}
+.date-big{font-size:clamp(72px,13vw,168px)!important;line-height:.95!important;margin:0 0 14px!important}
+.date-sub{font-weight:700;margin:0}
+ul.list li{margin-bottom:6px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+:root{--ink:#0B0A0A;--paper:#F2EEE6;--pink:#FF2E8B;--lime:#B4F21C;--orange:#F7741A;--fog:#A9A39A;--sub-ink:#5C564E;
+  --display:"Dela Gothic One",sans-serif;--body:"Zen Kaku Gothic New",sans-serif}
+html{overflow-x:clip}
+body{background:var(--ink);color:var(--paper);font-family:var(--body);font-weight:500;overflow-x:clip}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.logo{font-family:var(--display);font-size:17px;text-decoration:none}
+.top nav a{color:var(--fog);font-weight:700}.top nav a:hover{color:var(--lime)}
+.top{position:relative;z-index:2}
+section,.hero{position:relative;isolation:isolate}
+section > .wrap,.hero-inner{position:relative;z-index:1}
+/* hero: 絵の後ろでインクが弾ける */
+.hero{padding:24px 0 150px;
+  background:url(/aigamejam/img/ink/splat-pink.svg) left -60px top 10px/440px no-repeat,
+             url(/aigamejam/img/ink/splat-lime2.svg) right -40px top -40px/380px no-repeat,
+             url(/aigamejam/img/ink/splat-orange.svg) left 18% bottom 10px/200px no-repeat,
+             url(/aigamejam/img/ink/spray-white.svg) right 12% bottom 40px/420px no-repeat}
+.hero-inner{display:grid;gap:40px;justify-items:center;text-align:center}
+.hero-art{margin:0;max-width:880px;width:100%}
+.hero-art img{border-radius:4px;box-shadow:0 24px 60px rgba(0,0,0,.7)}
+.lead{font-family:var(--display);font-size:clamp(18px,2.4vw,26px);line-height:1.6;margin:0 0 24px}
+.facts{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-bottom:36px;font-weight:700}
+.facts span{color:var(--lime);margin-right:8px}
+/* 申し込みボタン=インクそのもの。文字は飛び散りの本体の中に収まり、ホバーでインクごと動く */
+.cta{display:inline-grid;place-items:center;width:min(460px,92vw);aspect-ratio:520/240;margin:-24px 0 -8px;
+  font-family:var(--display);font-size:clamp(17px,4.6vw,21px);color:var(--ink);text-decoration:none;padding-bottom:4px;
+  background:url(/aigamejam/img/ink/cta-lime.svg) center/contain no-repeat;transform:rotate(-3deg);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+.cta:hover{transform:rotate(1deg) scale(1.07)}
+.cta:active{transform:rotate(1deg) scale(.98)}
+.cta-note{color:var(--fog);margin-top:18px}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,4.8vw,58px);line-height:1.3}
+h3{font-weight:900;font-size:19px}
+.sub,.desc{color:var(--fog)}
+/* 境界:上のセクションの色が垂れてくる */
+.s-about,.s-crew{background:var(--paper);color:var(--ink);padding-top:170px}
+.s-about::before,.s-crew::before{content:"";position:absolute;left:0;right:0;top:0;height:150px;background:url(/aigamejam/img/ink/drips-black.svg) top left/1200px 150px repeat-x;z-index:0}
+.s-about .sub,.s-crew .sub,.s-crew .desc{color:var(--sub-ink)}
+.s-day,.s-faq{padding-top:170px}
+.s-day::before,.s-faq::before{content:"";position:absolute;left:0;right:0;top:0;height:150px;background:url(/aigamejam/img/ink/drips-paper.svg) top left/1200px 150px repeat-x;z-index:0}
+.s-about{background:url(/aigamejam/img/ink/splat-orange.svg) right -80px bottom -80px/320px no-repeat,var(--paper)}
+.s-about h2{position:relative}
+.s-about h2::after{content:"";position:absolute;left:-64px;top:-62px;width:130px;height:130px;background:url(/aigamejam/img/ink/splat-pink2.svg) center/contain no-repeat;z-index:-1;opacity:.9}
+.s-day h2{display:inline-block;padding:34px 40px 34px 0;background:url(/aigamejam/img/ink/splat-pink2.svg) left -70px center/220px no-repeat;text-shadow:3px 3px 0 var(--ink),-1px -1px 0 var(--ink)}
+.stages li{padding:16px 0;border-bottom:1px solid #2A2724}
+.stages time{font-family:var(--display);font-size:24px;line-height:1}
+.stages li.hot time{color:var(--lime)}
+.stages b{font-size:18px;font-weight:900}.stages span{color:var(--fog);font-size:14px}
+.s-info{background:url(/aigamejam/img/ink/spray-lime.svg) left 5% top 20px/480px no-repeat,var(--ink)}
+.card{position:relative;background:var(--paper);color:var(--ink);padding:34px;border-radius:4px}
+.card .sub{color:var(--sub-ink)}
+.card::after{content:"";position:absolute;right:-34px;top:-34px;width:110px;height:110px;background:url(/aigamejam/img/ink/splat-lime2.svg) center/contain no-repeat}
+.card-accent::after{background-image:url(/aigamejam/img/ink/splat-pink.svg)}
+.big{font-family:var(--display);font-size:44px;line-height:1.1;margin:6px 0 14px}
+.card-accent .big{color:var(--pink)}
+.org{align-items:center}
+.org-photo{border-radius:4px}
+.people{margin-top:64px}
+.person{position:relative}
+.person img,.person .tbd{position:relative;border-radius:50%;z-index:1}
+.person::before{content:"";position:absolute;left:-34px;top:-34px;width:180px;height:180px;background:url(/aigamejam/img/ink/splat-black.svg) center/contain no-repeat;z-index:0}
+.person:nth-child(2)::before{background-image:url(/aigamejam/img/ink/splat-pink2.svg)}
+.person:nth-child(3)::before{background-image:url(/aigamejam/img/ink/splat-orange.svg)}
+.person:nth-child(4)::before{background-image:url(/aigamejam/img/ink/splat-lime2.svg)}
+.person:nth-child(5)::before{background-image:url(/aigamejam/img/ink/splat-pink.svg)}
+.person:nth-child(6)::before{background-image:url(/aigamejam/img/ink/splat-black.svg)}
+.ink .people{row-gap:56px}
+.person .tbd{background:var(--ink);color:var(--lime);font-family:var(--display);font-size:40px}
+.role{position:relative;z-index:1;display:inline-block;background:var(--ink);color:var(--lime);font-weight:900;font-size:12px;padding:2px 10px;margin:6px 0 8px}
+details{border-bottom:1px solid #2A2724;padding:18px 0}
+details summary::after{font-family:var(--display);color:var(--pink);font-size:22px;line-height:1}
+details p{color:var(--fog)}
+.s-final{text-align:center;padding:140px 0 160px;
+  background:url(/aigamejam/img/ink/splat-pink.svg) center/min(900px,140vw) no-repeat,url(/aigamejam/img/ink/spray-lime.svg) right 8% bottom 30px/460px no-repeat,var(--ink)}
+.s-final h2{font-size:clamp(36px,6vw,72px);color:#fff;text-shadow:0 4px 0 var(--ink)}
+.s-final p{font-weight:900;color:#fff}
+.s-final .cta{margin-top:0;background-image:url(/aigamejam/img/ink/cta-paper.svg)}
+footer{padding:28px 0 48px;color:var(--fog);font-size:13px}
+@media (max-width:760px){
+  .hero{background-size:260px,220px,140px,260px}
+  .card::after{right:-14px;top:-24px;width:80px;height:80px}
+  .person::before{left:-20px;top:-24px;width:150px;height:150px}
+}
+
+</style>
+</head>
+<body class="ink">
+<div class="wrap top">
+  <a class="logo" href="#">AI Gamejam Sapporo@北大</a>
+  <nav><a href="#about">イベントについて</a><a href="#day">当日の流れ</a><a href="#crew">運営・審査員</a><a href="#faq">よくある質問</a></nav>
+</div>
+<header class="hero">
+  <div class="wrap hero-inner">
+    <h1 class="sr">AI Gamejam Sapporo@北大 — AIで、1日で、ゲームを作る。2026年11月29日(日)</h1>
+    <figure class="hero-art"><img src="/aigamejam/img/hero.png" alt="AI GAMEJAM SAPPORO 2026.11.29 SUN — AIで、1日で、ゲームを作る。" width="660" height="270"></figure>
+    <div class="hero-info">
+      <p class="lead">コードが書けなくても大丈夫。AIと仲間がいれば、1日でゲームは作れる。</p>
+      <ul class="facts">
+        <li><span>日時</span>2026年11月29日(日) 9:00〜21:00</li>
+        <li><span>会場</span>北海道大学 エンレイソウ 2F 第一会議室</li>
+        <li><span>参加費</span>無料(懇親会つき)・定員20名</li>
+      </ul>
+      <div class="cta-box"><a class="cta" href="https://connpass.com/event/409586/">connpassで申し込む</a>
+      <span class="cta-note">申し込みは11月28日(土)23:59まで。1人での申し込みもOK。</span></div>
+    </div>
+  </div>
+</header>
+<main>
+<section id="about" class="s-about">
+  <div class="wrap grid2">
+    <h2>大作はいらない。<br>面白さの芯を、<br>遊べる形に。</h2>
+    <div class="body-copy">
+      <p>開会で発表されるテーマに沿って、1〜数分で遊べる小さなゲームを1本作りきります。コード・絵・音・文章は、AIに手伝ってもらってOK。</p>
+      <p>チームは当日、会場で組みます。完成しなくても、途中までのものを発表できます。</p>
+      <p class="sub">大学生・専門学生・中高生・社会人、誰でも参加できます。</p>
+    </div>
+  </div>
+</section>
+<section id="day" class="s-day">
+  <div class="wrap grid2">
+    <div><h2>当日の流れ</h2><p class="sub">朝に集まって、夜にはみんなのゲームで遊んでいます。テーマは開会で発表します。</p></div>
+    <ol class="stages"><li class=""><time>9:00</time><div><b>受付</b><span>名札をお渡しします</span></div></li>
+<li class="hot"><time>9:40</time><div><b>開会・テーマ発表</b><span>ルールと審査基準の説明</span></div></li>
+<li class=""><time>10:00</time><div><b>制作スタート</b><span>アイデア出し・チーム作りから</span></div></li>
+<li class=""><time>12:00</time><div><b>企画書を提出</b><span>かんたんなものでOK。昼食は作りながらで</span></div></li>
+<li class=""><time>17:00</time><div><b>制作終了・作品提出</b><span>15時に「動く」、17時に「遊べる」が目標</span></div></li>
+<li class=""><time>17:20</time><div><b>最終発表</b><span>1チーム3分</span></div></li>
+<li class=""><time>18:20</time><div><b>試遊会</b><span>全作品をみんなで遊びます</span></div></li>
+<li class=""><time>19:30</time><div><b>結果発表・表彰</b><span>19:00からスポンサーLT</span></div></li>
+<li class="hot"><time>20:00</time><div><b>懇親会</b><span>お寿司と飲み物を用意しています</span></div></li></ol>
+  </div>
+</section>
+<section class="s-info">
+  <div class="wrap">
+    <div class="date-main">
+      <p class="date-label">本番</p>
+      <p class="big date-big">11.29 SUN</p>
+      <p class="date-sub">9:00〜21:00 ／ 北海道大学 エンレイソウ 2F 第一会議室</p>
+    </div>
+    <div class="grid2 cards">
+      <div class="card"><h3>事前オンライン講座(本番の9日前)</h3><p class="big">11.20 FRI 20:00</p><p>Discordで、AIでブラウザゲームを15分で作る実演をします。有料プランの選び方と準備、当日の流れも説明します。</p><p class="sub">録画と資料が残るので、あとから見ても大丈夫です。</p></div>
+      <div class="card card-accent"><h3>AIの有料プランは必須・補助あり</h3><p class="big">¥1,500</p><p>1日で作りきるために、AIの有料プラン(Claude Pro・ChatGPT Plusなど)の契約が必要です。契約した方には1,500円を補助します。</p><p class="sub">受付で契約メールか領収書を提示。表彰まで参加した方に、表彰のあとでお渡しします。</p></div>
+    </div>
+    <div class="grid2" style="margin-top:56px">
+      <div><h3>持ち物</h3><ul class="list"><li>ノートPC(必須)と電源アダプタ</li><li>AIの有料プランを契約したアカウント</li><li>昼食・飲み物</li></ul></div>
+      <div><h3>作るもの</h3><ul class="list"><li>テーマに沿った、1〜数分で遊べる小さなゲーム</li><li>ブラウザで動くWebゲームがおすすめ</li><li>既存作品のキャラクターは使わない</li></ul></div>
+    </div>
+  </div>
+</section>
+<section id="crew" class="s-crew">
+  <div class="wrap">
+    <div class="grid2 org">
+      <img class="org-photo" src="/aigamejam/img/gamma.jpg" alt="Gammaの活動の様子(顔にはモザイク処理をしています)" width="640" height="480">
+      <div>
+        <h2>運営・審査員・メンター</h2>
+        <h3>主催:北海道大学ゲーム制作サークル Gamma</h3>
+        <p class="sub">北大の学生を中心に、ゲームを作ったり遊んだりしているサークルです。</p>
+        <h3 style="margin-top:22px">メインスポンサー:株式会社インフィニットループ</h3>
+        <img class="sponsor-logo" src="/aigamejam/img/il-logo.svg" alt="infiniteloop" width="194" height="58">
+        <p class="sub">札幌に本社を置き、ゲーム・VR/AR・Webサービス開発などを手がけるIT企業です。</p>
+      </div>
+    </div>
+    <div class="grid3 people"><article class="person"><img class="face" src="/aigamejam/img/kociden_face.jpg" alt="kociden" width="320" height="320"><p class="role">イベントリーダー</p><h3>kociden</h3><p class="desc">北海道大学 工学部3年(休学中)。VRゲーム制作やVR関連の仕事に取り組んできました。札幌にも「作り始め、仲間と出会い、完成まで進める」入口を増やしたくて、このイベントのリーダーを務めています。</p></article>
+<article class="person"><img class="face" src="/aigamejam/img/kishimoto.jpg" alt="岸本 悠佑 さん" width="320" height="320"><p class="role">審査員</p><h3>岸本 悠佑 さん</h3><p class="desc">株式会社EQUES(東大松尾研発スタートアップ)北海道支社長。札幌すごいAI会 代表。</p></article>
+<article class="person"><img class="logo" src="/aigamejam/img/il-logo.svg" alt="インフィニットループ" width="320" height="320"><p class="role">審査員・メンター</p><h3>インフィニットループ</h3><p class="desc">松井健太郎会長、または社員の方が参加予定(調整中)。</p></article>
+<article class="person"><img class="face" src="/aigamejam/img/kokuren.jpg" alt="kokuren さん" width="320" height="320"><p class="role">メンター</p><h3>kokuren さん</h3><p class="desc">医師・AIクリエイター。AIを用いたゲーム開発や作曲、MV制作を行っており、過去に人工音声モデルの開発も手がけました。</p></article>
+<article class="person"><img class="face" src="/aigamejam/img/atamol.jpg" alt="atamol さん" width="320" height="320"><p class="role">メンター</p><h3>atamol さん</h3><p class="desc">リバースエンジニア。エンジニア歴12年。AIを使いこなした結果、もうコードを書くのをやめました。</p></article>
+<article class="person"><div class="tbd" aria-hidden="true">?</div><p class="role">審査員</p><h3>Coming soon</h3><p class="desc">3人目以降の審査員は近日発表します。</p></article></div>
+  </div>
+</section>
+<section id="faq" class="s-faq">
+  <div class="wrap grid2"><h2>よくある質問</h2><div><details><summary>プログラミングができなくても参加できますか?</summary><p>できます。事前講座で、コードを書かずにAIでゲームを作る方法を見せます。</p></details>
+<details><summary>1人で参加しても大丈夫ですか?</summary><p>大丈夫です。チームは当日、会場で組みます。</p></details>
+<details><summary>AIの有料プランは必要ですか?</summary><p>必要です。無料版では1日で作りきるのが難しいため、Claude Pro・ChatGPT Plusなどの有料プランを契約して参加してください。契約した方には1,500円を補助します。</p></details>
+<details><summary>完成しなかったらどうなりますか?</summary><p>途中までのものでも発表できます。</p></details>
+<details><summary>中高生でも参加できますか?</summary><p>できます。18歳未満の方は保護者の同意を得てから参加してください。使えるAIは事前講座で案内します。</p></details></div></div>
+</section>
+<section class="s-final">
+  <div class="wrap">
+    <h2>11.29、北大で<br>ぶちまけよう。</h2>
+    <p>参加無料・定員20名。申し込むとDiscordの招待リンクが届きます。</p>
+    <a class="cta" href="https://connpass.com/event/409586/">connpassで申し込む</a>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">主催:北海道大学ゲーム制作サークル Gamma ／ #AIGamejamSapporo</div></footer>
+</body>
+</html>
