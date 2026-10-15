@@ -48,6 +48,9 @@ details[open] summary::after{content:"−"}
 details p{margin:10px 0 0}
 ul.list{margin:0;padding-left:1.2em}
 .sponsor-logo{height:46px;width:auto;margin:8px 0 12px}
+.sponsor-sub{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin:18px 0 4px}
+.sponsor-logo-sm{height:30px;width:auto;background:#fff;padding:4px 8px}
+.sponsor-name{font-weight:700}
 .person img.logo{object-fit:contain;background:#fff;padding:16px}
 .date-main{text-align:center;margin:0 0 64px}
 .date-label{display:inline-block;font-weight:900;font-size:17px;letter-spacing:.12em;margin:0 0 6px}
@@ -198,8 +201,8 @@ footer{padding:28px 0 48px;color:var(--fog);font-size:13px}
       <div class="card card-accent"><h3>AIの有料プランは必須・補助あり</h3><p class="big">¥1,500</p><p>1日で作りきるために、AIの有料プラン(Claude Pro・ChatGPT Plusなど)の契約が必要です。契約した方には1,500円を補助します。</p><p class="sub">受付で契約メールか領収書を提示。表彰まで参加した方に、表彰のあとでお渡しします。</p></div>
     </div>
     <div class="grid2" style="margin-top:56px">
-      <div><h3>持ち物</h3><ul class="list"><li>ノートPC(必須)と電源アダプタ</li><li>AIの有料プランを契約したアカウント</li><li>昼食・飲み物</li></ul></div>
-      <div><h3>作るもの</h3><ul class="list"><li>テーマに沿った、1〜数分で遊べる小さなゲーム</li><li>ブラウザで動くWebゲームがおすすめ</li><li>既存作品のキャラクターは使わない</li></ul></div>
+      <div><h3>持ち物</h3><ul class="list"><li>ノートPC(必須)と電源アダプタ</li><li>ゲームエンジン(Godot か Unity)をインストール済みのPC</li><li>AIの有料プランを契約したアカウント</li><li>昼食・飲み物</li></ul></div>
+      <div><h3>作るもの</h3><ul class="list"><li>テーマに沿った、1〜数分で遊べる小さなゲーム</li><li>ゲームエンジンは Godot か Unity がおすすめ(ブラウザ向けに書き出すと、試遊会でみんなが遊べます)</li><li>既存作品のキャラクターは使わない</li></ul></div>
     </div>
   </div>
 </section>
@@ -211,9 +214,14 @@ footer{padding:28px 0 48px;color:var(--fog);font-size:13px}
         <h2>運営・審査員・メンター</h2>
         <h3>主催:北海道大学ゲーム制作サークル Gamma</h3>
         <p class="sub">北大の学生を中心に、ゲームを作ったり遊んだりしているサークルです。</p>
-        <h3 style="margin-top:22px">メインスポンサー:株式会社インフィニットループ</h3>
+        <h3 style="margin-top:22px">協賛</h3>
         <img class="sponsor-logo" src="/aigamejam/img/il-logo.svg" alt="infiniteloop" width="194" height="58">
-        <p class="sub">札幌に本社を置き、ゲーム・VR/AR・Webサービス開発などを手がけるIT企業です。</p>
+        <p class="sub">株式会社インフィニットループ:札幌に本社を置き、ゲーム・VR/AR・Webサービス開発などを手がけるIT企業です。</p>
+        <div class="sponsor-sub">
+          <img class="sponsor-logo-sm" src="/aigamejam/img/eques-logo.png" alt="EQUES" width="817" height="256">
+          <span class="sponsor-name">東大発起業weekend</span>
+        </div>
+        <p class="sub">株式会社EQUES:東京大学松尾研究室発のスタートアップ。北海道支社を拠点に、札幌でAIに触れ、自らの手で新しいものを生み出す挑戦を応援しています。</p>
       </div>
     </div>
     <div class="grid3 people"><article class="person"><img class="face" src="/aigamejam/img/kociden_face.jpg" alt="kociden" width="320" height="320"><p class="role">イベントリーダー</p><h3>kociden</h3><p class="desc">北海道大学 工学部3年(休学中)。VRゲーム制作やVR関連の仕事に取り組んできました。札幌にも「作り始め、仲間と出会い、完成まで進める」入口を増やしたくて、このイベントの企画・リーダーをしています。</p></article>
